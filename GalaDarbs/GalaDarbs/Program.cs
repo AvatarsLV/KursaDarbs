@@ -8,7 +8,10 @@ namespace GalaDarbs
         public static void Main(string[] args)
         {
 
-            Console.WriteLine("Ievadi A");
+            // TODO: 1) no šīs vietas tiek saukts Calculator, kas arī visu funkcionalitāti izdarīt un beigās atgriezīs ciparu
+            // ieglabā mainīgajā rezultātu un to "WriteLaino"
+            //piemēram: var result = Calculator.GetResult();
+            Console.WriteLine("Ievadi A"); // TODO: 0) Nav kļūda, bet taisam programmu eng valodā arī koncoles tekstu
             string aText = Console.ReadLine();
             int aNumber = int.Parse(aText);
             Console.WriteLine($"A ir {aNumber}");
@@ -32,10 +35,6 @@ namespace GalaDarbs
             Operations.Minus(aNumber, bNumber);
             Operations.Times(aNumber, bNumber);
             Operations.Divide(aNumber, bNumber);
-
-
         }
-       
-   
     }
 }
