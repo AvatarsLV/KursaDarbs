@@ -2,7 +2,7 @@
 namespace Calculator
 {
     public static class Operations
-    { 
+    {
         // TODO: 2) Failu pārsaukt Operation un arī tāpat klases nosaukumu
         // TODO: 3) uztaisīt konstruktoru, kas nolasīs ievadīto tekstu piem.:"1 + 3"
         // TODO: 4) sadala ievadīto tekstu pa atstarpēm(sākumam būs vieglāk)
@@ -12,8 +12,13 @@ namespace Calculator
         // TODO: 7) pārsaukt Calculator projektu par Calculation
         // pēc tam turpināsim tālak
 
+        //unit tests minus operacijai
+
+     
+
         public static void Sum(int firtstNum, int secondNum)
         {
+            
             int result = firtstNum + secondNum;
             Console.WriteLine($"A + B = {result}"); // returnot resultats
             //pakape logaritms
@@ -22,12 +27,13 @@ namespace Calculator
             //GD atdod calc ievadi un calc visu izdara un GD parada
             //enumi interfeisi
             //katrai darbibai ir sava klase kas atbilst vienam interfase
+            //
+            //
         }
-        public static void Minus(int firtstNum, int secondNum)
+        public static int Minus(int firtstNum, int secondNum)
         {
             int result = firtstNum - secondNum;
-            Console.WriteLine($"A - B = {result}");
-
+            return result;
         }
         public static void Times(int firtstNum, int secondNum)
         {
@@ -36,6 +42,12 @@ namespace Calculator
         }
         public static void Divide(int firtstNum, int secondNum)
         {
+            if (secondNum == 0)
+            {
+                Console.WriteLine("You cannot divide with 0");
+                return;
+            }
+
             int result = firtstNum / secondNum;
             Console.WriteLine($"A / B = {result}");
 
@@ -50,8 +62,5 @@ namespace Calculator
 
         }
     }
-
-
-
 }
 

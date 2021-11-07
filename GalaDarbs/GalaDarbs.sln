@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalaDarbs", "GalaDarbs\GalaDarbs.csproj", "{BD748E38-23ED-4176-AD71-FA62A771719F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicCalculator", "GalaDarbs\BasicCalculator.csproj", "{BD748E38-23ED-4176-AD71-FA62A771719F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{C343D677-4DBE-4431-B65B-3F1079BA0ABB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculation", "Calculator\Calculation.csproj", "{C343D677-4DBE-4431-B65B-3F1079BA0ABB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
