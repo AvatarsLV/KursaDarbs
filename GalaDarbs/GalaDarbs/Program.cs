@@ -8,29 +8,24 @@ namespace GalaDarbs
     {
         public static void Main(string[] args)
         {
-
-            // TODO: 1) no šīs vietas tiek saukts Calculator, kas arī visu funkcionalitāti izdarīt un beigās atgriezīs ciparu
-            // ieglabā mainīgajā rezultātu un to "WriteLaino"
-            //piemēram: var result = Calculator.GetResult();
-
-            // DONE  TODO: 0) Nav kļūda, bet taisam programmu eng valodā arī koncoles tekstu
             Console.WriteLine("Input equation, available operations:");
             foreach (var opInEnum in Enum.GetValues(typeof(MathOperations)))
             {
                 Console.WriteLine(opInEnum.ToString());
             }
 
+            // TODO: No šejienes visam  jābūt iekš Calculation projekta
             string resultEquation = Console.ReadLine();
             string[] equationSplitet = resultEquation.Split(' ');
             
             string[] bText = resultEquation.Split(' ');
             //int aNumber = int.Parse(bText[0]);
-            var aNumber = Convert.ToInt32(bText[0]);
-            var bNumber = int.Parse(bText[2]);
-            string operationSign = bText[1];
+            var aNumber = Convert.ToInt32(bText[0]); // TODO: noķert kļūdu, ja ievadītais nav skaitlis
+            var bNumber = int.Parse(bText[2]); // TODO: noķert kļūdu, ja ievadītais nav skaitlis
+            string operationSign = bText[1]; 
 
 
-            switch (operationSign)
+            switch (operationSign) // TODO: noķert kļūdu, ja ievadītais nav valida operācija
             {
                 case "+" :
                     Operations.Sum(aNumber, bNumber);
@@ -49,7 +44,7 @@ namespace GalaDarbs
                     break;
 
             }
-
+            // TODO: beigās šeit izvada iegūto rezultātu
 
 
 
