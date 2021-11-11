@@ -1,4 +1,6 @@
 ﻿using System;
+using BasicCalculator;
+
 namespace Calculator
 {
     public static class Operations
@@ -15,16 +17,38 @@ namespace Calculator
 
         //unit tests minus operacijai
 
+        public static Calculation GetUserInput()
+        {
+            string resultEquation = Console.ReadLine();
+            string[] equationSplitet = resultEquation.Split(' ');
+
+            string[] bText = resultEquation.Split(' ');
+            int aNumber = Convert.ToInt32(bText[0]);
 
 
-        public static void Sum(int firtstNum, int secondNum)
+            
+
+            var bNumber = int.Parse(bText[2]); // TODO: noķert kļūdu, ja ievadītais nav skaitlis
+            string operationSign = bText[1];
+            var Calculation = new Calculation
+            {
+                numberOne = aNumber,
+                numberTwo = bNumber,
+                operation = GetOperation(operationSign)
+
+            };
+
+            return Calculation;
+        }
+
+
+    public static void Sum(int firtstNum, int secondNum)
         {
             
             int result = firtstNum + secondNum;
             
             Console.WriteLine($"A + B = {result}"); // returnot resultats
             //pakape logaritms
-            // inline split
             // ar iekavam
             //GD atdod calc ievadi un calc visu izdara un GD parada
             //enumi interfeisi
@@ -52,8 +76,7 @@ namespace Calculator
 
             int result = firtstNum / secondNum;
             Console.WriteLine($"A / B = {result}");
-
-        }
+            }
 
         public enum MathOperations
         {
@@ -63,6 +86,28 @@ namespace Calculator
             Divide
 
         }
+
+        public static MathOperations GetOperation(string text) 
+        {
+            switch (text) // TODO: noķert kļūdu, ja ievadītais nav valida operācija
+            {
+                case "+":
+                    return MathOperations.Plus;
+
+                case "-":
+                    return MathOperations.Minus;
+
+                case "/":
+                    return MathOperations.Divide;
+
+                case "*":
+                    return MathOperations.Times;
+                default:
+                    throw new ArgumentOutOfRangeException();
+
+            }
+        }
+
     }
 }
 
